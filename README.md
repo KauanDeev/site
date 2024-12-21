@@ -1,0 +1,1 @@
+© 2024 AltoLife. Todos os direitos reservados.

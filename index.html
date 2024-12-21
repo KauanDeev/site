@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alto Life - Website</title>
+    <link rel="icon" href="src/img/logo1.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <style>
+        /* Reset básico e fontes */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: #ffae00;
+            color: #e0e0e0;
+            font-size: 16px;
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+          :root {
+            --cor-principal: #d39000;
+            --cor-secundaria: #2b2b2b;
+            --cor-terciaria: #492828;
+            --cor-texto: #000;
+            --cor-fundo: #555;
+            --cor-hover: #d39000;
+        }
+
+                /* Header com fundo de imagem */
+          .header {
+            background: url('src/img/background.png') no-repeat center center/cover; /* Imagem de fundo */
+            padding: 0px 0;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombras suaves */
+          }
+
+          .header .logo img {
+            max-width: 250px;
+            transition: transform 0.3s ease;
+          }
+
+          .header .logo img:hover {
+            transform: scale(1.1);
+          }
+
+          /* Navbar - Logo abaixo da logo com tema escuro */
+          .navbar {
+            background-color: #d18800;  /* Cor de fundo escuro */
+            padding: 20px 0;
+            text-align: center;
+            margin-top: 20px;
+          }
+
+          .navbar ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+          }
+
+          .navbar li {
+            display: inline;
+          }
+
+          .navbar a {
+            color: #e0e0e0; /* Cor clara para links */
+            text-decoration: none;
+            font-size: 20px;
+            padding: 10px 20px;
+            position: relative;
+            font-weight: bold;
+            text-transform: uppercase;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            border-radius: 5px;
+          }
+
+          .navbar a:hover {
+            background-color: var(--cor-hover);
+            transform: scale(1.1);
+          }
+
+          .navbar a.active {
+            color: var(--cor-principal);
+            font-weight: bold;
+          }
+
+                    /* Banner com gradiente suave */
+          .banner {
+            background: linear-gradient(135deg, #555, #3a3a3a);  /* Fundo escuro com gradiente suave */
+            color: #fff;
+            text-align: center;
+            padding: 100px 20px;
+            position: relative;
+            animation: fadeInBanner 2s ease-in-out;
+          }
+
+          .banner h1 {
+            font-size: 60px;
+            margin-bottom: 20px;
+            font-weight: 700;
+          }
+
+          .banner p {
+            font-size: 24px;
+            margin-bottom: 30px;
+            font-weight: 400;
+          }
+
+          .cta-button {
+            background-color: #292929;
+            color: white;
+            padding: 15px 30px;
+            font-size: 20px;
+            border-radius: 80px;
+            text-decoration: none;
+            display: inline-block;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+          }
+
+          .cta-button:hover {
+            background-color: #1b1b1b;
+            transform: scale(1.1);
+          }
+
+          /* Animação do Banner */
+          @keyframes fadeInBanner {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+          }
+
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+            gap: 20px;
+            text-align: center;
+        }
+
+        .servicos {
+            background-color: #292929;
+            padding: 80px 20px;
+            flex: 3;
+        }
+
+        .servicos h2 {
+            font-size: 36px;
+            margin-bottom: 40px;
+            font-weight: 600;
+            color: var(--cor-principal);
+        }
+
+        .product-item {
+            background-color: #555;
+            color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+            margin: 20px;
+            display: inline-block;
+            width: 1350px;
+        }
+        
+        .product-item h3 {
+            font-size: 36px;
+            text-align: center;
+        }
+
+        .product-item p {
+          font-size: 36px;
+          text-align: center;
+        }
+
+        .product-item:hover {
+            transform: translateY(-10px);
+            background-color: #555;
+        }
+
+        .preco {
+            font-size: 22px;
+            font-weight: bold;
+            color: #ff6347;
+        }
+        .product-item2 {
+            background-color: #555;
+            color: #fff;
+            padding: 30px;
+            border-radius: 80px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+            margin: 20px;
+            display: inline-block;
+            width: auto;
+            text-align: center;
+        }
+
+        .product-item2:hover {
+            transform: translateY(-10px);
+            background-color: #555;
+        }
+
+        /* Seção Sobre */
+.sobre {
+  background-color: #333;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.sobre h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.sobre p {
+  font-size: 20px;
+  color: #ddd;
+  line-height: 1.6;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Seção de Contato */
+.contato {
+  background-color: #292929;
+  color: white;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.contato h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.contato p {
+  font-size: 20px;
+  line-height: 1.6;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Rodapé */
+.footer {
+  background-color: #222;  /* Fundo bem escuro */
+  color: white;
+  text-align: center;
+  padding: 30px 0;
+}
+
+.social-media {
+  margin-top: 20px;
+}
+
+.social-media a {
+  color: #fff;
+  font-size: 20px;
+  text-decoration: none;
+  margin: 0 20px;
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.social-media a:hover {
+  transform: scale(1.1);
+}
+
+.social-media img {
+  width: 40px;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+/* Animação de Fade para a seção de Banner */
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.animated.fadeIn {
+  animation: fadeIn 2s ease-in-out;
+}
+
+/* Gifs nas redes sociais */
+.social-media a img {
+  animation: gifAnimation 2s infinite alternate;
+}
+
+@keyframes gifAnimation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+.header2 {
+            padding: 0px 0;
+            text-align: center;
+
+          }
+
+          .header2 .logo img {
+            max-width: 250px;
+            transition: transform 0.3s ease;
+          }
+
+          .header2 .logo img:hover {
+            transform: scale(1.1);
+          }
+
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <img src="src/img/title.png" alt="Logo da Loja">
+        <nav class="navbar">
+                <li class="ini"><a href="#inicio">INICIO</a></li>
+                <li class="shoop" ><a href="#shop">SHOP</a></li>
+                <li><a href="https://discord.gg/aaRmF9arkB">DISCORD</a></li>
+                <li><a href="https://www.youtube.com/@LifeAlto/videos">YOUTUBE</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Banner principal -->
+  <section class="banner">
+    <div class="banner-content" id="inicio">
+      <h1>BEM VINDO AO ALTO LIFE RP</h1>
+      <p>Já pensou em viver uma vida de verdade dentro do Minecraft? Então venha para o Alto Life RP, o melhor servidor de roleplay inspirado na vida real!</p>
+      <p>⚡️ Cidade incrível e cheia de detalhes para explorar e fazer um bom roleplay!</p>
+        <p>💰 Economia equilibrada e oportunidades para enriquecer</p>
+          <p>🏢 Edifícios e arranha-céus impressionantes para se aventurar</p>
+          <p>🎉 Eventos únicos como Natal, Halloween entre outros.</p>
+          <p>👥 Crie amizades para sempre e se divirta conosco!</p>
+          <p>💪🏻 Venha ser parceiro único de ALTO LIFE ROLEPLAY</p>
+          <p>🛠️  Sistemas realistas, addons únicos feitos pela equipe, sempre otimizado!
+            🇧🇷  Sem dizer que é 100% brasileiro! (contém favela)</p>
+            <p>Não perca tempo e venha fazer parte do nosso servidor! Alto Life está pronto para você criar a sua história e viver grandes aventuras. Entre agora e mostre do que você é capaz!</p>
+            <h3>IP: altolrp.haskhosting.com.br</h3>
+            <h3>Porta: 25571</h3>
+            <a href="#servicos" class="cta-button">Saiba-Mais</a>
+                  </div>
+          </section>
+    </div>
+  </section>
+
+    <div class="container2">
+        <!-- Produtos -->
+        <section id="servicos" class="servicos">
+            <h2>Mais Informações</h2>
+            <div class="product-item2">
+                <h3>🚚  Termos de Compra - Mercado Life</h3>
+                  <p>Seja bem-vindo ao Mercado Life! Antes de realizar sua compra, pedimos que leia atentamente nossas condições. Assim, garantimos uma experiência segura e justa para todos os jogadores.</p>
+                  <p><b>🛒 1. Aceitação dos Termos</b>
+                    Ao concluir uma compra, você declara estar de acordo com todas as regras descritas aqui. Leia com atenção antes de finalizar sua transação.</p>
+                  <p><b>💳 2. Pagamentos</b>
+                  As compras devem ser feitas exclusivamente pelos métodos disponibilizados pelo servidor. Não nos responsabilizamos por transações externas ou realizadas fora do ambiente oficial.</p>
+                  
+                  <p><b>📦 3. Entrega de Itens</b>
+                  Os itens serão entregues diretamente no jogo após a confirmação do pagamento. A entrega pode levar alguns minutos, dependendo da transação.</p>
+                  
+                <p><b>⛔ 4. Política de Reembolso Sem Reembolso </b>
+                  Não serão feitos reembolsos em casos de arrependimento ou erros na compra por parte do jogador. Reembolsos só serão analisados em situações de falhas técnicas do servidor que impeçam a entrega dos itens comprados.</p>
+                  
+              <p><b>📅 5. Assinatura de VIP</b>
+                  A assinatura de VIP tem duração de 1 mês, contando a partir do momento da compra. Após esse período, será necessário renovar a assinatura para continuar usufruindo dos benefícios exclusivos.</p>
+                  
+                <p><b>⚖️ 7. Uso Correto e Justiça</b>
+                  Qualquer tentativa de burlar o sistema ou usar os itens para obter vantagens injustas resultará em punições severas, como banimento e remoção dos itens adquiridos.</p>
+                  
+                <p><b>🔄 8. Alterações nos Termos</b>
+                  O Mercado Life pode atualizar os termos de compra a qualquer momento. É responsabilidade do jogador consultar as regras regularmente para estar sempre informado.</p>
+                  
+                <p><b>🛠️ 9. Suporte</b>
+                  Caso enfrente algum problema ou tenha dúvidas sobre sua compra, nossa equipe está pronta para ajudar. Procure-nos pelos canais oficiais do servidor!</p>
+            </div>
+            <header class="header2" id="shop">
+            <div class="logo">
+                <img src="src/img/minecraft_title.png">
+            </div>
+          </header>
+          <div class="servicos">
+            <div class="product-item2">
+                <h3>VIP LIFE URBANO</h3>
+                <p>CASA PRONTA COM MOBÍLIA</p>
+                <p>ACESSO VIP EM RESTAURANTES, LOJAS...</p>
+                <p>7 MIL LACRES</p>
+                <p>ACESSO AO IATE VIP</p>
+                <p>ETC...</p>
+                <span class="preco">R$ 10.00 </span>
+            </div>
+            <div class="product-item2">
+              <h3>VIP LIFE COMERCIANTE</h3>
+              <p>1 APARTAMENTO</p>
+                <p>ACESSO AO NAVIO VIP</p>
+                <p>15 MIL LACRES</p>
+                <p>2 CABEÇAS DECORATIVAS</p>
+                <p>ETC...</p>
+              <span class="preco">R$ 20.00 </span>
+          </div>
+          <div class="product-item2">
+            <h3>VIP LIFE ENCANTADOR</h3>
+            <p>1 MANSÃO COM MOBÍLIA</p>
+            <p>UM LOTE NA ÁREA NOBRE (GRANDE)</p>
+            <p>ACESSO A AMBOS NAVIOS/IATE</p>
+            <p>30 MIL LACRES</p>
+            <p>ETC...</p>
+            <span class="preco">R$ 30.00 </span>
+          </div>
+        <div class="product-item2">
+          <h3>VIP LIFE SUPREMO</h3>
+          <p>1 EMPRESA</p>
+          <p>1 APARTAMENTO DE MEGA LUXO</p>
+          <p>50 MIL LACRES</p>
+          <p>ETC...</p>
+          <span class="preco">R$ 50.00</span>
+      </div>
+    </div>
+        </section>
+        <section>
+  </section>
+</div>
+
+  <!-- Rodapé -->
+  <footer class="footer">
+    <p>&copy; 2024 AltoLife. Todos os direitos reservados.</p>
+  
+  </body>
+    <script>
+
+      // Função para animação de scroll ao clicar no botão "Saiba Mais"
+const ctaButton = document.querySelector('.cta-button');
+if (ctaButton) {
+    ctaButton.addEventListener('click', function (event) {
+        event.preventDefault();
+        const targetSection = document.querySelector('#servicos');
+        if (targetSection) {
+            targetSection.scrollIntoView({ behavior: 'smooth' });
+        }
+    });
+}
+const ini = document.querySelector('.ini');
+if (ini) {
+  ini.addEventListener('click', function (event) {
+        event.preventDefault();
+        const targetSection = document.querySelector('#inicio');
+        if (targetSection) {
+            targetSection.scrollIntoView({ behavior: 'smooth' });
+        }
+    });
+}
+const shoop = document.querySelector('.shoop');
+if (shoop) {
+  shoop.addEventListener('click', function (event) {
+        event.preventDefault();
+        const targetSection = document.querySelector('#shop');
+        if (targetSection) {
+            targetSection.scrollIntoView({ behavior: 'smooth' });
+        }
+    });
+}
+
+// Efeito de aparecer suavemente ao rolar a página
+const sections = document.querySelectorAll('section');
+if (sections.length > 0) {
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
+    }, { threshold: 0.5 });
+
+    sections.forEach(section => observer.observe(section));
+}
+    </script>
+</body>
+</html>
